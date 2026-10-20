@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "mopedclub",
+  "version": "${version}",
+  "name": "Moped Club Client",
+  "description": "Chaotic, cosmetic client-side menu. Right Shift opens the GUI.",
+  "environment": "client",
+  "entrypoints": { "client": ["club.moped.MopedClient"] },
+  "depends": { "fabricloader": ">=0.18.0", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}
