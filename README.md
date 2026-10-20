@@ -1,16 +1,13 @@
-# Moped Club Client (Fabric 1.21.11)
+# Moped Club Client — Fabric 1.21.11
 
-This is a **source project**, not an already compiled or tested Minecraft mod.
+This is a **source project**, not a prebuilt or tested `.jar`. It currently implements a Right Shift GUI with cosmetic placeholder switches; ESP and Freecam are **not implemented**.
 
-## Build without installing Gradle on your PC
+## GitHub build (no local Java or Gradle needed)
 
-1. Create a GitHub repository and upload **the contents** of this folder, including `.github/workflows/build.yml`.
-2. Open your repository's **Actions** tab.
-3. Select **Build Moped Club Client** and click **Run workflow** (or push to `main` to start automatically).
-4. If the build succeeds, open that workflow run and download the `moped-club-client-jar` artifact.
-5. Extract the artifact and put the non-`sources` `.jar` file in the `mods` folder of your Minecraft 1.21.11 Fabric Modrinth profile.
-6. Ensure Fabric API is installed. Press **Right Shift** in game to open the GUI.
+1. Extract the ZIP. Open the `Moped_Club_Client_Corrected` folder.
+2. Upload the **folders** `.github` and `src` as folders, and the root files, preserving the paths. Do not flatten all files into the repository root.
+3. The repository must show `.github/workflows/build.yml` and `src/main/java/club/moped/MopedClient.java`.
+4. Open **Actions** > **Build Moped Club Client** > **Run workflow**.
+5. If the build succeeds, download the artifact. Unzip it and put the non-sources mod `.jar` in your Modrinth Fabric 1.21.11 profile's `mods` folder.
 
-The current menu includes cosmetic toggle placeholders. ESP, tracers, freecam, zoom, and other cheat modules are **not implemented**. Minecraft 1.21.11 compatibility has not been verified; if GitHub Actions fails, inspect its build log.
-
-For a local build, use Java 21 and Gradle: `gradle build`.
+GitHub Actions will report compilation errors if any; compilation has not been verified in this environment.

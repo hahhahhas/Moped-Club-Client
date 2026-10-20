@@ -25,5 +25,9 @@ public final class MopedScreen extends Screen {
         context.drawCenteredTextWithShadow(textRenderer, "MOPED CLUB CLIENT", width/2, height/2-118, color);
         context.drawCenteredTextWithShadow(textRenderer, "100% certified goofy | cosmetic features", width/2, height/2+72, 0xFFAAAAAA);
     }
+    @Override public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
+        if (keyCode == org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT_SHIFT) { close(); return true; }
+        return super.keyPressed(keyCode, scanCode, modifiers);
+    }
     @Override public boolean shouldPause() { return false; }
 }
